@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir</title>
+    <link rel="stylesheet" href="/estiloadd.css">
+</head>
+<body>
+    <div class="form-container">
+    <hr>
+    <h2>Agregar inscripción</h2>
+    <form action="/add" method="post">
+        <label for="id_asignatura">ID Asignatura:</label>
+        <input type="number" name="id_asignatura" id="id_asignatura" required>
+
+        <label for="id_alumno">ID Alumno:</label>
+        <input type="number" name="id_alumno" id="id_alumno" required>
+
+        <label for="id_grupo">ID Grupo:</label>
+        <input type="number" name="id_grupo" id="id_grupo" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" id="fecha" required>
+
+        <label for="horario">Horario:</label>
+        <input type="text" name="horario" id="horario" required>
+
+        <button type="submit">Registrar</button>
+    </form>
+</div>
+
+<input type="button" class="button-regresar" value="Regresar" onclick="location.href='/'" style="width: auto;">
+
+</body>
+</html>

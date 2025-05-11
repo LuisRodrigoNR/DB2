@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Inscripciones</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Listar inscripciones</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>ID Asignatura</th>
+                <th>ID Alumno</th>
+                <th>ID Grupo</th>
+                <th>Fecha</th>
+                <th>Horario</th>
+                <th>Acciones</th>
+            </tr>
+            <% inscripciones.forEach(inscripcion => { %>
+            <tr>
+                <td><%= inscripcion.id_inscripciones %></td>
+                <td><%= inscripcion.id_asignatura %></td>
+                <td><%= inscripcion.id_alumno %></td>
+                <td><%= inscripcion.id_grupo %></td>
+                <td><%= inscripcion.fecha %></td>
+                <td><%= inscripcion.horario %></td>
+                <td>
+                    <a href="/edit/<%= inscripcion.id_inscripciones %>">Editar</a> |
+                    <a href="/delete/<%= inscripcion.id_inscripciones %>">Eliminar</a>
+                </td>
+            </tr>
+            <% }); %>
+        </table>
+
+        <div>
+            <input type="button" class="button-regresar" value="Añadir" onclick="location.href='/add'" style="width: auto;">
+        </div>
+    </div>
+</body>
+</html>
